@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
   const toggleListArr = [menuList, joinList, centerList];
   const toggleBtArr = [menuBt, joinBt, centerBt];
   // 펼침 목록 모두 닫기
-  
+
   // 코드 블럭이 같은 기능을 반복된다
   // 기능을 만들어서 사용(함수)
 
@@ -60,7 +60,7 @@ window.addEventListener("load", function () {
       });
       const css = getComputedStyle(list).display;
       console.log(css);
-      
+
       if (css === "none") {
         list.style.display = "block";
         bt.classList.add("active");
@@ -73,10 +73,54 @@ window.addEventListener("load", function () {
   listToggle(menuBt, menuList);
   listToggle(joinBt, joinList);
   listToggle(centerBt, centerList);
+  // ==================
   // 전체 메뉴 펼침 기능
-  const allMenu = this.document.querySelector(".all-menu")
-  const cateList = this.document.querySelector(".cate-list")
-  const cateListWrap = this.document.querySelector(".all-menu-cate-wrap")
+  const allMenu = this.document.querySelector(".all-menu");
+  const cateList = this.document.querySelector(".cate-list");
+  const cateListWrap = this.document.querySelector(".all-menu-cate-wrap");
   const deliList = this.document.querySelector(".deli-list");
   const themeList = this.document.querySelector(".theme-list");
+  let isMenuOpen = false;
+  cateList.addEventListener("mouseleave", function () {
+    // cateList마우스리브 했을때 
+    if (!isMenuOpen) {
+      allMenu.classList.remove("active")
+
+    }
+  });
+  cateListWrap.addEventListener("mouseleave", function () {
+    // cateListWrap 했을때 
+    if (!isMenuOpen) {
+      allMenu.classList.remove("active")
+
+    }
+  });
+  cateListWrap.addEventListener("mouseenter" ,function(){
+    allMenu.classList.add("active")
+  })
+  cateList.addEventListener("mouseenter", function () {
+    allMenu.classList.add("active");
+  });
+  deliList.addEventListener("mouseenter", function () {
+    allMenu.classList.remove("active");
+  });
+  themeList.addEventListener("mouseenter", function () {
+    allMenu.classList.remove("active");
+  });
+  // 서브 카테고리 보여주기 기능
+  const cateLists = this.document.querySelectorAll(".cate-list > li");
+  const cateDepth2 = this.document.querySelectorAll(".cate-depth2-list");
+  cateLists.forEach(function (item, index) {
+    // console.log(item);
+    item.addEventListener("mouseenter", function () {
+      cateDepth2.forEach(function (itemSub, indexSub) {
+        // console.log(itemSub);
+        itemSub.style.display = "none"
+        if (indexSub === index) {
+          itemSub.style.display = "block";
+        }
+      });
+    });
+  });
+  // ====================end
 });
