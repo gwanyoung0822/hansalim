@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
   const wrap = this.document.querySelector(".wrap")
   //    console.log(header);
   let scy = 0;
-  // console.log(scy);
+  console.log(scy);
 
   this.window.addEventListener("scroll", function () {
     // console.log(scy);

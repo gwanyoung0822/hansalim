@@ -513,15 +513,14 @@
           <h2 class="section-title"><b>이 물품은 어떠세요?</b></h2>
           <div class="good-wrap" id="data-today">
             <!-- js출력 -->
-            
           </div>
           <div class="good-wrap no-mb" id="data-today2">
             <!-- js출력 -->
           </div>
         </div>
       </section>
-       <!-- 알뜰물품 -->
-       <section class="sale">
+      <!-- 알뜰물품 -->
+      <section class="sale">
         <div class="container">
           <div class="layout-wrap clearfix">
             <div class="layout-left">
@@ -550,17 +549,149 @@
         </div>
       </section>
       <!-- 새물품 -->
-      <section class="new"></section>
+      <section class="new">
+        <div class="container">
+          <h2 class="section-title">
+            반가운<br />
+            <b>새물품</b>
+            <a href="#" class="section-bt">더보기</a>
+          </h2>
+          <!-- 새물품 내용 -->
+          <div class="new-wrap clearfix">
+            <div class="new-left" id="data-new">
+              <!-- js출력 -->
+            </div>
+            <div class="new-right" id="data-new-list">
+              <!-- js출력 -->
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 추천물품 -->
-      <section class="recommend"></section>
+      <section class="recommend">
+        <div class="container">
+          <div class="layout-wrap clearfix">
+            <div class="layout-left">
+              <h2 class="section-title section-bar">
+                <b class="blue">조합원</b>님을 위한 <br />
+                <b>추천물품</b>
+              </h2>
+              <p class="section-title-txt">여름방학 삼시세끼 걱정 없어요!</p>
+              <div class="slide-control">
+                <div class="slide-pg"></div>
+                <button class="slide-prev">이전</button>
+                <button class="slide-next">다음</button>
+              </div>
+            </div>
+            <div class="layout-right">
+              <!-- 추천물품 슬라이드 -->
+              <div class="good-slide" id="data-recommend">
+                <!-- 외부 추천물품 데이터 연동 출력 js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 인기 물품 -->
-      <section class="popular"></section>
+      <section class="popular">
+        <div class="container">
+          <h2 class="section-title">
+            지금 가장 많이 이용하는 <b>인기물품</b>
+            <a href="#" class="popular-more">반려동물 물품 더보기</a>
+          </h2>
+          <!-- 인기 물품 카테고리 아이콘 -->
+          <div class="popular-cate clearfix">
+            <div class="popular-slide-prev">
+              <span>이전</span>
+            </div>
+            <div class="popular-slide" id="data-popular-icon">
+              <!-- 외부 인기물품 아이콘 데이터 연동 출력 js -->
+            </div>
+            <div class="popular-slide-next">
+              <span>다음</span>
+            </div>
+          </div>
+          <!-- 인기 물품 목록 -->
+          <div class="good-wrap no-mb" id="data-popular">
+            <!-- 외부 인기물품 데이터 연동 출력 js -->
+          </div>
+        </div>
+      </section>
       <!-- 브랜드관 -->
-      <section class="brand"></section>
+      <section class="brand">
+        <div class="container">
+          <div class="layout-wrap clearfix">
+            <div class="layout-left">
+              <h2 class="section-title section-bar">
+                한살림 가치를 담은<br />
+                <b>브랜드관</b>
+              </h2>
+              <p class="section-title-text">
+                생활 속 작은 실천!<br />
+                뜻깊은 물품소비에 참여해보세요.
+              </p>
+              <a href="#" class="section-bt">더보기</a>
+              <div class="slide-control">
+                <div class="slide-pg"></div>
+                <button class="slide-prev">이전</button>
+                <button class="slide-next">다음</button>
+              </div>
+            </div>
+            <div class="layout-right">
+              <!-- 브랜드 슬라이드 -->
+              <div class="brand-slide" id="data-brand">
+                <!-- 외부 브랜드관 데이터 연동 출력 js -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 배너 -->
-      <section class="banner"></section>
+      <section class="banner">
+        <div class="container">
+          <div class="banner-slide" id="data-banner">
+            <!-- js출력 -->
+          </div>
+          <button class="slide-prev"></button>
+          <button class="slide-next"></button>
+        </div>
+      </section>
       <!-- 제출요리 -->
-      <section class="season"></section>
+      <section class="season">
+        <div class="container">
+          <h2 class="section-title">제철제맛 가득한 <b>요리</b></h2>
+          <div class="season-wrap clearfix">
+            <div class="season-left">
+              <a href="#">
+                <img src="images/cook_main.jpg" alt="요리" />
+                <div class="season-info">
+                  <h3>요리방법</h3>
+                  <p>
+                    <span>촉촉 황태채와 탱글탱글 도토리면을 호로록</span>
+                    <b>황태채 도토리비빔면</b>
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="season-right">
+              <div class="season-list">
+                <ul class="season-good-list" id="data-season" data-scrollbar>
+                  <!-- 외부 제철요리 데이터 연동 출력 js -->
+                
+                </ul>
+              </div>
+              <div class="season-total">
+                <div class="season-good-total">
+                  <input type="checkbox" id="chkall" class="season-good-check" />
+                  <label for="chkall" class="season-label">라벨</label>
+                  전체 선택 <em id="buy-total">5</em>개
+                </div>
+                <a href="#" class="buy-good"> 총 <em id="buy-total-money">49,500</em>원 바구니 담기 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 이용후기 -->
       <section class="review"></section>
       <!-- 커뮤니티 -->
