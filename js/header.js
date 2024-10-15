@@ -125,5 +125,13 @@ window.addEventListener("load", function () {
       });
     });
   });
+  // 탑버튼
+  const fixTopBt = this.document.querySelector(".fix-top")
+  fixTopBt.addEventListener("click",function(){
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  })
   // ====================end
 });
